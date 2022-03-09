@@ -1,0 +1,26 @@
+//---- VARIABLES ----
+
+// Background colours
+$c_bg_1: rgba(131,58,180,1);
+$c_bg_2: rgb(206, 12, 12);
+
+// UI colours
+$c_ui_bg: rgba(28, 22, 32, 0.9);
+$c_ui_text: rgba(255, 255, 255, 0.9);
+$c_ui_text_hover: rgba(255, 255, 255, 1);
+
+// Button colours
+$c_btn_text: #FFF;
+$c_btn_primary: dodgerblue;
+$c_btn_secondary: rgb(218, 5, 5);
+
+//---- PARTIALS ----
+
+@import "partials/base";
+@import "partials/modal";
+@import "partials/form";
+@import "partials/button";
+@import "partials/appbar";
+@import "partials/sidebar";
+@import "partials/responsive";
+@import "partials/game";

@@ -1,0 +1,56 @@
+@media only screen and (max-width: 980px) {
+
+    #game {
+        max-width: 560px;
+        min-height: 580px;
+    }
+
+    #game-main {
+        flex-direction: column;
+        width: inherit;
+    }
+
+    #game-frame,
+    #bet-frame {
+        width: 100%;
+        margin: 0;
+    }
+
+    #game-frame {
+        height: 70%;
+        border: none;
+        border-radius: 0;
+    }
+
+    #bet-frame {
+        height: 28%;
+        padding: 10px;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    #bet-buttons {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    #bet-amount-input {
+        width: 100%;
+    }
+
+    .game-modal {
+        width: 90%;
+    }
+
+    #game-frame-inner {
+        width: 80%;
+        gap: 10px;
+    }
+
+    #ricardo {
+        display: none;
+    }
+
+}

@@ -1,0 +1,238 @@
+#game-title.money {
+    color: rgb(0, 255, 85) !important;
+}
+
+#game-app-icon.money svg {
+    fill: rgb(0, 255, 85) !important;
+}
+
+#game {
+    background-image: linear-gradient(to bottom, rgba($c_bg_1, 0.52), rgba($c_bg_2, 0.73)), url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.game-title.debt {
+    color: red !important;
+}
+
+#game-frame {
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.playing-card {
+    border-radius: 7px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.playing-card img {
+    border-radius: 7px;
+}
+
+#card-deck {
+    background-image: url('../img/cards/back.png');
+    background-size: auto 100%;
+    background-position-x: 2px;
+    background-repeat: no-repeat;
+    padding-right: 12px;
+}
+
+.card-deck img {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    border-radius: 7px;
+}
+
+#player-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-height: 228px;
+}
+
+#player-cards.min {
+    max-height: 100px;
+}
+
+#game-cards {
+    display: flex;
+    height: auto;
+    max-height: 160px;
+}
+
+#game-cards.hidden {
+    opacity: .4;
+    pointer-events: none;
+}
+
+#new-game-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#game-buttons .game-col {
+    justify-content: center;
+    flex-direction: column;
+}
+
+#game-buttons .odds {
+    background:rgba(0, 0, 0, 0.5);
+    color: rgba(255,255,255,0.8);
+    padding: 10px 16px;
+    border-radius: 0 0 7px 7px;
+    font-size: 11px;
+}
+
+#game-buttons .lower {
+    fill: $c_btn_primary;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    width: 32px;
+    height: 32px;
+}
+
+#game-buttons .higher {
+    fill: $c_btn_secondary;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    width: 32px;
+    height: 32px;
+}
+
+#game-buttons button.hidden {
+    opacity: .5;
+}
+
+#game-buttons.hidden {
+    pointer-events: none;
+}
+
+#win-streak {
+    color: yellow;
+    font-weight: bold;
+    font-size: 11px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+}
+
+#bet-form.hidden {
+    display: none;
+}
+
+#ricardo {
+    position: absolute;
+    top: 0;
+}
+
+#ricardo img {
+    height: 150px;
+    width: auto;
+    border-radius: 100%;
+}
+
+.playing-card {
+    backface-visibility: hidden;
+}
+
+.card-deck-take {
+    animation-name: card-deck-animation;
+    animation-duration: .75s;
+}
+
+.card-dealt {
+    animation-name: card-dealt-animation;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}
+
+.card-turn {
+    transform: rotateY(-90deg) scale(1.1);
+    animation-name: card-turn-animation;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+}
+
+.card-flip {
+    animation-name: card-flip-animation;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+}
+
+.card-reveal {
+    animation-name: card-reveal-animation;
+    animation-duration: .2s;
+    backface-visibility: hidden;
+}
+
+@keyframes card-deck-animation {
+    50% {
+        background-position-x: 0;
+        background-size: auto 90%;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes card-dealt-animation {
+    0% {
+        transform: translateX(80%) scale(.5);
+    }
+    50% {
+        transform: translateY(-10%) translateX(0) scale(1.1);
+    }
+    100% {
+        transform: translateY(-10%) rotateY(89deg) scale(1.1);
+        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.7));
+    }
+}
+
+@keyframes card-turn-animation {
+    0% {
+        transform: translateY(-10%) rotateY(-90deg) scale(1.1);
+        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.7));
+    }
+    10% {
+        transform: translateY(-10%) rotateY(-90deg) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) rotateY(0deg) scale(1);
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    }
+}
+
+@keyframes card-flip-animation {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    100% {
+        transform: rotateY(90deg) scale(1);
+    }
+}
+
+@keyframes card-reveal-animation {
+    0% {
+        transform: rotateY(-90deg) scale(1);
+    }
+    100% {
+        transform: rotateY(0deg) scale(1);
+    }
+}
+
+@media only screen and (max-width: 980px) {
+
+    #game {
+        font-size: 12px;
+    }
+
+    #player-cards {
+        margin-bottom: 10px !important;
+    }
+
+    #game button {
+        font-size: 10px !important;
+    }
+
+}

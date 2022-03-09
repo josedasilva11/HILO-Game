@@ -1,0 +1,54 @@
+#game-sidebar {
+    height: 100%;
+    width: 250px;
+    background: $c_ui_bg;
+    position: absolute;
+    right: -250px;
+    transition: right .2s ease-in-out;
+}
+
+#game-sidebar.active {
+    right: 0;
+    transition: right .2s ease-in-out;
+}
+
+#game-sidebar-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#game-sidebar-options li {
+    color: #FFF;
+    padding: 0 10px;
+    transition: background .2s ease-in-out;
+}
+
+#game-sidebar-options li:hover {
+    background: rgba(255,255,255,0.05);
+    transition: background .2s ease-in-out;
+}
+
+#game-sidebar-options .game-btn {
+    color: #FFF;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+.game-sidebar-label {
+    display: flex;
+    align-items: center;
+}
+
+.game-sidebar-icon {
+    display: flex;
+    align-items: center;
+}
+
+.game-sidebar-icon svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
